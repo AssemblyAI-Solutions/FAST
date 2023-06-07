@@ -6,7 +6,7 @@
 ```python
 pip install -r requirements.txt
 ```
-2. Start Redis Server on CLI (Current config uses localhost)
+2. Start [Redis Server](https://redis.io/docs/ui/insight/) on CLI (Current config uses localhost)
 ```shell
 redis-server
 ```
@@ -26,3 +26,10 @@ python3 app.py
 ```
 python3 chunked_asr.py
 ```
+
+
+#### *Disclaimer:*
+
+- Not tested thoroughly for bugs
+- Very rough edges
+- Email garvan@assemblyai.com for any support!
