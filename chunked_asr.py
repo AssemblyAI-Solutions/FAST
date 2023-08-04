@@ -6,6 +6,7 @@ import io
 import transcribe
 import redis
 import metrics
+import os
 
 r = redis.Redis(host='localhost', port=6379, db=0)
 
@@ -46,6 +47,12 @@ frame_samples = int(audio.frame_rate * frame_duration)
 n_frames = len(audio) // (frame_duration * 1000)  # Multiply frame_duration by 1000 to get ms
 print("Number of frames:", n_frames)
 print("Frame samples:", frame_samples)
+
+# Try to create audio folder if it doesn't exist
+try:
+    os.mkdir('./audio')
+except:
+    pass
 
 transcript_ids = []
 monologue_buffer = []
